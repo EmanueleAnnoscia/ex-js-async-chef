@@ -1,4 +1,4 @@
-import dayjs from "dayjs"
+
 
 async function fetchJson(url) {
     const response = await fetch(url);
@@ -28,7 +28,7 @@ const getChefBirthday = async (id) => {
         }
 
 
-        return chef.birthDate
+        return chef.birthDate;
 
     } catch (error) {
         console.error("Errore in getChefBirthday:", error.message);
@@ -44,4 +44,6 @@ const getChefBirthday = async (id) => {
     } catch (error) {
         console.error(error.message);
     }
+
+    console.log('fine del codice');
 })();
