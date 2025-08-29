@@ -1,3 +1,5 @@
+import dayjs from "dayjs"
+
 async function fetchJson(url) {
     const response = await fetch(url);
     const obj = await response.json()
@@ -38,7 +40,7 @@ const getChefBirthday = async (id) => {
 (async () => {
     try {
         const birthday = await getChefBirthday(3)
-        console.log('Ecco la data di nascita dello chef:', birthday)
+        console.log('Ecco la data di nascita dello chef:', dayjs(birthday).format('DD/MM/YYYY'))
     } catch (error) {
         console.error(error.message);
     }
